@@ -1,4 +1,4 @@
-CREATE TABLE public.customer (
+CREATE TABLE customer (
 	first_name varchar(30) NOT NULL,
 	last_name varchar(30) NOT NULL,
 	email varchar(60) NOT NULL,
@@ -13,4 +13,19 @@ CREATE TABLE public.customer (
 	date_entered timestamp NOT NULL,
 	id serial4 NOT NULL,
 	CONSTRAINT customer_pkey PRIMARY KEY (id)
+);
+
+create table sales_person (	
+	first_name varchar(30) not null,
+	last_name varchar(30) not null,
+	email varchar(60) not null,
+	street varchar(50) not null,
+	city varchar(40) not null,
+	state char(2) not null default 'PA',
+	zip smallint not null,
+	phone varchar(20) not null,
+	birth_date date null,
+	sex sex_type not null,
+	date_hired timestamp not null,
+	id serial primary key
 );
