@@ -27,4 +27,12 @@ rename column day_of_week to weekday;
 alter table sales_item
 drop column weekday;
 
+-- change type
+alter table customer
+alter column zip type integer;
 
+alter table sales_person
+alter column zip type integer;
+
+alter table sales_order
+alter column purchase_order_number type bigint;
